@@ -252,7 +252,7 @@ label {
 
 <body>
 <header>
-  <a href="A&L Apparel.html">
+  <a href="index.html">
     <img src="icons/A&L_logo.png" alt="A&L Logo" height="110px" width="196.8px">
   </a>
   <div class="icon-bar">
@@ -409,6 +409,15 @@ if (cartData.length === 0) {
   document.getElementById('subtotalDisplay').textContent = `₱${subtotal.toFixed(2)}`;
   document.getElementById('vatDisplay').textContent = `₱${vat.toFixed(2)}`;
   checkoutTotal.textContent = `Total: ₱${total.toFixed(2)}`;
+}
+
+  function clearCart() {
+  // Clear all cart data
+  localStorage.removeItem('cart');
+
+  alert("Purchase Complete! Thank you for shopping ♡");
+
+  window.location.href = "index.html";
 }
 </script>
 
